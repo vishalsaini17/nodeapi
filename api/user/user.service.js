@@ -10,11 +10,11 @@ module.exports = {
         (error, resultes, fields) => {
           console.log("query callback running...");
           if (error) {
-            // callback(error)
-            console.log("error");
+            console.log("query error");
+            callback(error)
           }
-          // callback(null, resultes)
-          console.log("no error");
+          console.log("no query error");
+          callback(null, resultes)
         }
       )
     }

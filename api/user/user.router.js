@@ -1,9 +1,9 @@
 const router = require('express').Router()
-const { createUser } = require('./user.controller')
+const { signup, signin } = require('./user.controller')
 
-router.post('/signup', createUser)
+router.post('/signup', signup)
 
-router.post('/signin', createUser)
+router.post('/signin', signin)
 
 router.get('/', (req, res) => {
   return res.send({
@@ -13,6 +13,5 @@ router.get('/', (req, res) => {
     ]
   })
 })
-
 
 module.exports = router

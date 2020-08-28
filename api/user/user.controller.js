@@ -10,7 +10,8 @@ module.exports = {
       if (err) {
         return res.status(500).send({
           success: 0,
-          message: err.sqlMessage
+          message: err.sqlMessage,
+          code: err.code
         })
       }
       return res.status(200).send(results);

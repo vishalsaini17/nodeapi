@@ -11,8 +11,10 @@ if(env.APP_ENV == 'development'){
 
 // imports
 const userRouter = require('./api/user/user.router')
+const talkRouter = require('./api/talk/talk.router')
 
 app.use('/api/user', userRouter)
+app.use('/api/talk', talkRouter)
 
 
 
